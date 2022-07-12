@@ -7,12 +7,12 @@ terraform {
   }
   backend "s3" {
     bucket = "bucket-maikol"
-    key    = "estados/estado-github"
+    key    = "estados/estado-github-branch"
     region = "us-east-1"
   }
 
 }
 
 provider "github" {
-  # Configuration options
+  owner = "vass-capacitacion"
 }
