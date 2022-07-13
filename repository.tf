@@ -20,19 +20,10 @@ resource "github_repository" "repository" {
 }
 
 
-resource "github_branch_protection" "protection" {
-  repository_id = github_repository.repository.node_id
-
-  pattern          = "main"
-  enforce_admins   = true
-  allows_deletions = true
 
 
-  required_pull_request_reviews {
-    dismiss_stale_reviews           = true
-    required_approving_review_count = 1
-  }
-}
+
+
 
 
 
